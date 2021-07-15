@@ -47,6 +47,9 @@ class App extends Component {
   }
  
   componentDidMount() {
+    document.addEventListener("contextmenu", (event) => {
+        event.preventDefault();
+    });  
     setTimeout(() => {
       this.setState({
         isLoading: false
